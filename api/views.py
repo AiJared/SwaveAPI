@@ -1,4 +1,3 @@
-from cgitb import lookup
 from urllib import response
 from .models import User
 from .serializers import UserSerializer

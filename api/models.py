@@ -1,5 +1,4 @@
-from datetime import datetime
-import email
+from datetime import date
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
@@ -53,7 +52,7 @@ class User(AbstractBaseUser):
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=30)
     bio = models.TextField(blank=True, null=True, max_length=2000)
-    age = models.DateField(default=datetime.date.today)
+    age = models.DateField(default=date.today())
     birth_place = models.CharField(max_length=30)
     school = models.CharField(max_length=30)
     occupation = models.CharField(max_length=30, blank=True, null=True)

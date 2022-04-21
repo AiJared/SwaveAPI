@@ -1,5 +1,5 @@
-from distutils.command.build_scripts import first_line_re
 from rest_framework import serializers
+from rest_auth.registration.serializers import RegisterSerializer
 from .models import User
 
 class CustomUserDetailsSerializer(serializers.ModelSerializer):
