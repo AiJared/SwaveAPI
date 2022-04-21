@@ -1,3 +1,4 @@
+import email
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,6 +39,20 @@ INSTALLED_APPS = [
     # local applications
     'api.apps.ApiConfig',
 ]
+
+ACCOUNT_EMAIL_VERIFICATION = None
+ACOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+
+REST_AUTH_SERIALIZERS = {
+    "USER_DETAILS_SERIALIZER":
+    "api.serializers.CustomUserDetailsSerializer",
+}
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    "REGISTER_SERIALIZER":
+    "api.serializers.CustomRegisterSerializer",
+}
 
 CORS_ORIGIN_ALLOW_ALL = True
 

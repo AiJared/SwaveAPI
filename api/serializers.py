@@ -2,7 +2,7 @@ from distutils.command.build_scripts import first_line_re
 from rest_framework import serializers
 from .models import User
 
-class CustomUserDetailSerializer(serializers.ModelSerializer):
+class CustomUserDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('email', 'first_name', 'last_name')
