@@ -9,6 +9,8 @@ class MyAccountManager(BaseUserManager):
             raise ValueError("You must have an email address!")
         if not username:
             raise ValueError("You must have username!")
+        if not password:
+            raise ValueError("You must have password!")
         
 
         user = self.model(
